@@ -1,12 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import { Container } from './presentation/components/container';
+import "./App.css";
+import { Container } from "./presentation/components/container";
+import { StepProgress } from "./presentation/components/stepper";
 
 function App() {
   return (
     <div className="App">
       <Container>
-        Teste
+        <StepProgress
+          StepProgress={1}
+          steps={["Produtos", "Informações", "Resultado"]}
+        />
       </Container>
     </div>
   );
