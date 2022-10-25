@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const ContainerStyled = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: left;
   padding: 32px;
   align-items: center;

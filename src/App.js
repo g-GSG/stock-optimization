@@ -1,5 +1,6 @@
+import { margin } from '@mui/system';
 import './App.css';
-import { Button, Input } from './presentation/components';
+import { Button, Input, StepProgress } from './presentation/components';
 import { Container } from './presentation/components/container';
 import { Header } from './presentation/components/header';
 
@@ -10,7 +11,11 @@ function App() {
         NOME
       </Header>
       <Container>
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+        <StepProgress
+          StepProgress={1}
+          steps={["Produtos", "Informações", "Resultado"]}
+        />
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '10vh'}}>
           <Input label='Nome do produto' type='text' width='182px' />
           <Input label='Volume' type='number' width='90px' />
           <Input label='Quantidade' type='number' width='90px' />
