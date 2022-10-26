@@ -47,7 +47,7 @@ function StepTwo() {
             margin='22px 0 0 0'
             onClick={() => previousStep()}
           >
-            <Typography fontSize={20}>Voltar</Typography>
+            <Typography fontSize={20} fontWeight='bold'>Voltar</Typography>
           </Button>
           <Button
             backgroundColor='#E0B1CB'
@@ -56,7 +56,7 @@ function StepTwo() {
             margin='22px 0 0 0'
             onClick={() => nextStep()}
           >
-            <Typography fontSize={20}>Avançar</Typography>
+            <Typography fontSize={20} fontWeight='bold'>Computar</Typography>
           </Button>
         </div>
       </StepTwoWrapper>
