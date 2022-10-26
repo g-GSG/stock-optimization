@@ -1,5 +1,5 @@
-import React from 'react'
-import { ButtonStyled } from './button.styles'
+import React from "react";
+import { ButtonStyled } from "./button.styles";
 
 function Button({ backgroundColor, children, height, margin, type, width, ...props }) {
   return (
@@ -13,7 +13,7 @@ function Button({ backgroundColor, children, height, margin, type, width, ...pro
     >
       {children}
     </ButtonStyled>
-  )
+  );
 }
 
-export default Button
+export default Button;
