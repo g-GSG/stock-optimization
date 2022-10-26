@@ -1,16 +1,10 @@
 import "./App.css";
-import { Container } from "./presentation/components/container";
-import { StepProgress } from "./presentation/components/stepper";
+import Home from "./context/home/home";
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <StepProgress
-          StepProgress={1}
-          steps={["Produtos", "Informações", "Resultado"]}
-        />
-      </Container>
+      <Home />
     </div>
   );
 }
