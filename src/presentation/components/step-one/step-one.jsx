@@ -17,7 +17,10 @@ function StepOne() {
 
   function addToTable() {
     setProducts([...products, { nome: product, quantidade: amount, volume: volume, lucro: profit }])
+  }
 
+  function nextStep() {
+    console.log('Próximo passo')
   }
 
   function handleChange(event, field) {
@@ -28,12 +31,11 @@ function StepOne() {
     field === 'lucro' && setProfit(parseFloat(event.target.value))
   }
 
-  console.log('product, amount, volume, profit', product, amount, volume, profit)
   return (
     <StepOneContainer>
       <StepProgress
         StepProgress={1}
-        steps={["Produtos", "Informações", "Resultado"]}
+        steps={["Produtos", "Estoque", "Resultado"]}
       />
       <StepOneWrapper>
         <Typography fontWeight='bold' fontSize={24}>
@@ -44,6 +46,7 @@ function StepOne() {
             name='product'
             label='Nome do produto'
             type='text'
+            height='51px'
             width='182px'
             value={product}
             onChange={(e) => handleChange(e, 'produto')}
@@ -52,6 +55,7 @@ function StepOne() {
             name='volume'
             label='Volume'
             type='number'
+            height='51px'
             width='90px'
             value={volume}
             onChange={(e) => handleChange(e, 'volume')}
@@ -60,6 +64,7 @@ function StepOne() {
             name='amount'
             label='Quantidade'
             type='number'
+            height='51px'
             width='90px'
             value={amount}
             onChange={(e) => handleChange(e, 'quantidade')}
@@ -68,6 +73,7 @@ function StepOne() {
             name='profit'
             label='Lucro'
             type='number'
+            height='51px'
             width='90px'
             value={profit}
             onChange={(e) => handleChange(e, 'lucro')}
@@ -98,7 +104,7 @@ function StepOne() {
             width='170px'
             height='44px'
             margin='22px 0 0 0'
-            onClick={() => addToTable()}
+            onClick={() => nextStep()}
           >
             <Typography fontSize={20}>Avançar</Typography>
           </Button>
