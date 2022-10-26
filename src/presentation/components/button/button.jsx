@@ -1,23 +1,26 @@
 import React from "react";
-import { StyledButton } from "./button.styles";
+import { ButtonStyled } from "./button.styles";
 
-const Button = ({
-  children,
-  onClick,
+function Button({
+  id,
   backgroundColor,
-  hoverBackgroundColor,
-  disabled,
-}) => {
+  children,
+  height,
+  margin,
+  type,
+  width,
+}) {
   return (
-    <StyledButton
+    <ButtonStyled
       backgroundColor={backgroundColor}
-      hoverBackgroundColor={hoverBackgroundColor}
-      onClick={onClick}
-      disabled={disabled}
+      type={type}
+      width={width}
+      height={height}
+      margin={margin}
     >
       {children}
-    </StyledButton>
+    </ButtonStyled>
   );
-};
+}
 
 export default Button;
