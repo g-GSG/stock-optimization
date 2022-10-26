@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import { StepLabel } from "@mui/material";
 import Step from "@mui/material/Step";
 import Stepper from "@mui/material/Stepper";

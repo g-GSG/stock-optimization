@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -7,30 +8,37 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { ProductsTableStyled } from './products-table.styles';
 
-function ProductsTable({rows}) {
+const TableCellStyled = styled(TableCell)(() => ({
+  '&.MuiTableCell-root': {
+    color: '#FFFFFF',
+    borderBottomColor: '#231942'
+  },
+}));
+
+function ProductsTable({ rows }) {
   return (
     <TableContainer component={ProductsTableStyled}>
-      <Table sx={{ minWidth: 650 }} aria-label="Products table">
+      <Table aria-label="Products table" >
         <TableHead>
           <TableRow>
-            <TableCell>Nome</TableCell>
-            <TableCell>Quantidade</TableCell>
-            <TableCell>Volume</TableCell>
-            <TableCell>Lucro</TableCell>
+            <TableCellStyled>Nome</TableCellStyled>
+            <TableCellStyled>Quantidade</TableCellStyled>
+            <TableCellStyled>Volume</TableCellStyled>
+            <TableCellStyled>Lucro</TableCellStyled>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow
               key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              sx={{'&:last-child td, &:last-child th': { border: 0 }}}
             >
-              <TableCell component="th" scope="row">
+              <TableCellStyled component="th" scope="row">
                 {row.nome}
-              </TableCell>
-              <TableCell>{row.quantidade}</TableCell>
-              <TableCell>{row.volume}</TableCell>
-              <TableCell>{row.lucro}</TableCell>
+              </TableCellStyled>
+              <TableCellStyled>{row.quantidade}</TableCellStyled>
+              <TableCellStyled>{row.volume}</TableCellStyled>
+              <TableCellStyled>{row.lucro}</TableCellStyled>
             </TableRow>
           ))}
         </TableBody>
