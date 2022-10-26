@@ -106,7 +106,7 @@ function StepOne() {
             margin='22px 0 0 0'
             onClick={() => nextStep()}
           >
-            <Typography fontSize={20}>Avançar</Typography>
+            <Typography fontSize={20} fontWeight='bold'>Avançar</Typography>
           </Button>
         </div>
       </StepOneWrapper>
