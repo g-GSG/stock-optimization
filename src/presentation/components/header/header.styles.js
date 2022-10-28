@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   display: flex;
-  position: relative;
+  position: absolute;
   top: 0;
   flex-direction: row;
   justify-content: center;
@@ -13,4 +13,4 @@ export const HeaderStyled = styled.header`
   color: white;
   font-weight: bold;
   font-size: 32px;
-`
+`;

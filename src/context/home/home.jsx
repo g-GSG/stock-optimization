@@ -1,10 +1,11 @@
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import SpeedIcon from "@mui/icons-material/Speed";
+import { Typography } from "@mui/material";
 import Button from "../../presentation/components/button/button";
 import { Container } from "../../presentation/components/container";
 import * as S from "./home.styles";
 
-const Home = () => {
+const Home = ({ setStep }) => {
   return (
     <Container>
       <S.ContainerBox>
@@ -25,11 +26,13 @@ const Home = () => {
           </S.SubtitleContainer>
         </div>
         <Button
+          type="button"
           backgroundColor="#E0B1CB"
-          hoverBackgroundColor="#9F86C0"
-          onClick={() => undefined}
+          onClick={() => setStep(1)}
         >
-          iniciar
+          <Typography fontSize={14} fontWeight="bold">
+            Iniciar
+          </Typography>
         </Button>
       </S.ContainerBox>
     </Container>

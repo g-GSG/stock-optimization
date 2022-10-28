@@ -4,7 +4,7 @@ export const ContainerBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 48px;
 `;
 
 export const SubtitleContainer = styled.div`

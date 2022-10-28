@@ -2,20 +2,21 @@ import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
   position: relative;
-  width: ${props => props.width};
-  height: ${props => props.height};
-  background-color: ${props => props.backgroundColor};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  background-color: ${(props) => props.backgroundColor};
   border: 0;
   border-radius: 10px;
-  margin: ${props => props.margin};
+  margin: ${(props) => props.margin};
   color: white;
+  padding: 8px 16px;
 
   &:hover {
     cursor: pointer;
   }
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -31,6 +32,6 @@ export const ButtonStyled = styled.button`
   &:active:after {
     opacity: 0.75;
     transition: 0s;
-    box-shadow: 0 0 0 0 #E0B1CB;
+    box-shadow: 0 0 0 0 #e0b1cb;
   }
-`
+`;
