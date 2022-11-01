@@ -23,7 +23,7 @@ function StepThree({ setStep }) {
   return (
     <StepThreeContainer>
       <StepProgress
-        StepProgress={3}
+        activeStep={2}
         steps={["Produtos", "Estoque", "Resultado"]}
       />
       <StepThreeWrapper>

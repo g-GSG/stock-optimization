@@ -28,7 +28,7 @@ function StepTwo({ setStep }) {
   return (
     <StepTwoContainer>
       <StepProgress
-        StepProgress={2}
+        activeStep={1}
         steps={["Produtos", "Estoque", "Resultado"]}
       />
       <StepTwoWrapper>
@@ -67,7 +67,7 @@ function StepTwo({ setStep }) {
           </Button>
           <Button
             backgroundColor="#E0B1CB"
-            width="15vw"
+            width="18vw"
             height="5.5vh"
             margin="3vh 0"
             onClick={() => nextStep()}

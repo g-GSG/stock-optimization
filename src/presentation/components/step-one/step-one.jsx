@@ -47,7 +47,7 @@ function StepOne({ setStep }) {
   return (
     <StepOneContainer>
       <StepProgress
-        StepProgress={1}
+        activeStep={0}
         steps={["Produtos", "Estoque", "Resultado"]}
       />
       <StepOneWrapper>
