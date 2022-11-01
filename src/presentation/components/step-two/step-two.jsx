@@ -40,7 +40,7 @@ function StepTwo({ setStep }) {
             name="maxVolume"
             label="Volume do estoque"
             type="number"
-            width="666px"
+            width="57vw"
             height="90px"
             fontSize={24}
             value={maxVolume}
@@ -56,9 +56,9 @@ function StepTwo({ setStep }) {
         >
           <Button
             backgroundColor="#E0B1CB"
-            width="170px"
-            height="44px"
-            margin="22px 0 0 0"
+            width="15vw"
+            height="5.5vh"
+            margin="3vh 0"
             onClick={() => previousStep()}
           >
             <Typography fontSize={20} fontWeight="bold">
@@ -67,9 +67,9 @@ function StepTwo({ setStep }) {
           </Button>
           <Button
             backgroundColor="#E0B1CB"
-            width="170px"
-            height="44px"
-            margin="22px 0 0 0"
+            width="15vw"
+            height="5.5vh"
+            margin="3vh 0"
             onClick={() => nextStep()}
           >
             <Typography fontSize={20} fontWeight="bold">

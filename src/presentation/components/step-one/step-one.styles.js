@@ -19,7 +19,7 @@ export const StepOneWrapper = styled.div`
 export const StepOneFormWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
   margin-top: 6vh;
 `

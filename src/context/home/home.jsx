@@ -28,9 +28,12 @@ const Home = ({ setStep }) => {
         <Button
           type="button"
           backgroundColor="#E0B1CB"
+          width="15vw"
+          height="5.5vh"
+          margin="3vh 0"
           onClick={() => setStep(1)}
         >
-          <Typography fontSize={14} fontWeight="bold">
+          <Typography fontSize={20} fontWeight="bold">
             Iniciar
           </Typography>
         </Button>

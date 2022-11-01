@@ -56,9 +56,9 @@ function StepThree({ setStep }) {
         >
           <Button
             backgroundColor="#E0B1CB"
-            width="170px"
-            height="44px"
-            margin="22px 0 0 0"
+            width="15vw"
+            height="5.5vh"
+            margin="3vh 0"
             onClick={() => backToHome()}
           >
             <Typography fontSize={20} fontWeight="bold">
