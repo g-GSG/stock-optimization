@@ -9,7 +9,7 @@ const Home = ({ setStep }) => {
   return (
     <Container>
       <S.ContainerBox>
-        <S.Title>Optimus</S.Title>
+        <S.Title>Optimustock</S.Title>
         <div>
           <S.SubtitleContainer>
             <SpeedIcon />

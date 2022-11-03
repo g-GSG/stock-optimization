@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import axios from "axios";
 import { useState } from "react";
 import { useProductsStepContext } from "../../../provider/productsProvider";
 import { Button } from "../button";
@@ -12,17 +13,32 @@ import {
 
 function StepTwo({ setStep }) {
   const [maxVolume, setMaxVolume] = useState(0);
-  const { setStockData, sendData } = useProductsStepContext();
+  const { stepData, setStockData, setResponse } = useProductsStepContext();
 
   function previousStep() {
     setStockData(0);
     setStep(1);
   }
 
-  function nextStep() {
+  async function nextStep() {
     setStockData(maxVolume);
-    sendData();
-    setStep(3);
+    const data = {
+      items: stepData.products,
+      maxVolume: parseInt(maxVolume)
+    }
+
+    console.log(data);
+    await axios.post("http://localhost:5000/optimization", data, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      }
+    }).then(function (response) {
+      setResponse(response.data)
+      setStep(3)
+    }).catch(function (error) {
+      console.log(error)
+    });
   }
 
   return (

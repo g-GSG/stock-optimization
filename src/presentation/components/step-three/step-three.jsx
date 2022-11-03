@@ -1,5 +1,4 @@
 import { Divider, Typography } from "@mui/material";
-import { useState } from "react";
 import { useProductsStepContext } from "../../../provider/productsProvider";
 import { Button } from "../button";
 import { ProductsTable } from "../products-table";
@@ -11,13 +10,11 @@ import {
 } from "./step-three.styles";
 
 function StepThree({ setStep }) {
-  const [estimatedProfit, setEstimatedProfit] = useState(0);
-  const { stepData, setStepData } = useProductsStepContext();
+  const { setStepData, response } = useProductsStepContext();
 
   function backToHome() {
     setStepData({});
     setStep(0);
-    setEstimatedProfit(estimatedProfit + 10);
   }
 
   return (
@@ -32,7 +29,7 @@ function StepThree({ setStep }) {
         </Typography>
         <StepThreeProfitWrapper>
           <Typography fontWeight="bold" fontSize={24}>
-            Lucro estimado: R$ {estimatedProfit}
+            Lucro estimado: R$ {response.lucro}
           </Typography>
         </StepThreeProfitWrapper>
         <Divider
@@ -45,7 +42,11 @@ function StepThree({ setStep }) {
             },
           }}
         />
-        <ProductsTable rows={stepData.products} />
+        {response.status === 'Optimal' ? <ProductsTable rows={response.items} /> : (
+          <Typography fontWeight="bold" fontSize={24}>
+            Status: {response.status}
+          </Typography>
+        )}
         <div
           style={{
             display: "flex",

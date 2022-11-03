@@ -7,24 +7,22 @@ const ProductsContext = createContext();
 const ProductsProvider = ({ children }) => {
   const [stepData, setStepData] = useState([
     {
-      product: "",
+      nome: "",
       volume: 0,
-      profit: 0,
-      amount: 0,
+      lucro: 0,
+      quantidade: 0,
     },
   ]);
 
-  const [stockData, setStockData] = useState(0);
+  const [response, setResponse] = useState(
+    { status: "", lucro: 0.0, max_volume: 0, items: [{ nome: "", quantidade: 0.0, volume: 0, lucro: 0 }] }
+  )
 
-  function sendData() {
-    console.log("stepData", stepData);
-    console.log("stockData", stockData);
-    // send to back
-  }
+  const [stockData, setStockData] = useState(0);
 
   return (
     <ProductsContext.Provider
-      value={{ stepData, setStepData, stockData, setStockData, sendData }}
+      value={{ stepData, setStepData, stockData, setStockData, response, setResponse }}
     >
       {children}
     </ProductsContext.Provider>

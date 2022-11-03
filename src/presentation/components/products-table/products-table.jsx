@@ -30,15 +30,15 @@ function ProductsTable({ rows }) {
         <TableBody>
           {rows.map((row) => (
             <TableRow
-              key={row.product}
+              key={row.nome}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCellStyled component="th" scope="row">
-                {row.product}
+                {row.nome}
               </TableCellStyled>
-              <TableCellStyled>{row.amount}</TableCellStyled>
+              <TableCellStyled>{row.quantidade}</TableCellStyled>
               <TableCellStyled>{row.volume}</TableCellStyled>
-              <TableCellStyled>{row.profit}</TableCellStyled>
+              <TableCellStyled>{row.lucro}</TableCellStyled>
             </TableRow>
           ))}
         </TableBody>

@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
 import Home from "./context/home/home";
@@ -14,7 +15,7 @@ function App() {
   return (
     <ProductsProvider>
       <div className="App">
-        <Header>NOME</Header>
+        <Header><Typography fontSize={32} fontWeight='bold'>Optimustock</Typography></Header>
         {step === 0 && <Home setStep={setStep} />}
         {step === 1 && (
           <Container>

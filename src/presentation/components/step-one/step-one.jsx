@@ -18,12 +18,12 @@ function StepOne({ setStep }) {
   const [volume, setVolume] = useState(0);
   const [profit, setProfit] = useState(0);
   const [products, setProducts] = useState([]);
-  const { stepData, setStepData } = useProductsStepContext();
+  const { setStepData } = useProductsStepContext();
 
   function addToTable() {
     setProducts([
       ...products,
-      { product: product, amount: amount, volume: volume, profit: profit },
+      { nome: product, quantidade: amount, volume: volume, lucro: profit },
     ]);
   }
 
