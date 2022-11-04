@@ -66,16 +66,6 @@ function StepOne({ setStep }) {
             onChange={(e) => handleChange(e, "produto")}
           />
           <Input
-            name="volume"
-            label="Volume"
-            fontSize="0.8vw"
-            type="number"
-            height="51px"
-            width="4vw"
-            value={volume}
-            onChange={(e) => handleChange(e, "volume")}
-          />
-          <Input
             name="amount"
             label="Quantidade"
             fontSize="0.8vw"
@@ -84,6 +74,16 @@ function StepOne({ setStep }) {
             width="4vw"
             value={amount}
             onChange={(e) => handleChange(e, "quantidade")}
+          />
+          <Input
+            name="volume"
+            label="Volume"
+            fontSize="0.8vw"
+            type="number"
+            height="51px"
+            width="4vw"
+            value={volume}
+            onChange={(e) => handleChange(e, "volume")}
           />
           <Input
             name="profit"
