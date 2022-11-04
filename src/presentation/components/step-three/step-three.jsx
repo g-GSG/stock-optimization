@@ -21,7 +21,7 @@ function StepThree({ setStep }) {
     <StepThreeContainer>
       <StepProgress
         activeStep={2}
-        steps={["Produtos", "Estoque", "Resultado"]}
+        steps={["Produtos", "Capacidade", "Resultado"]}
       />
       <StepThreeWrapper>
         <Typography fontWeight="bold" fontSize={24}>
@@ -42,7 +42,9 @@ function StepThree({ setStep }) {
             },
           }}
         />
-        {response.status === 'Optimal' ? <ProductsTable rows={response.items} /> : (
+        {response.status === "Optimal" ? (
+          <ProductsTable rows={response.items} />
+        ) : (
           <Typography fontWeight="bold" fontSize={24}>
             Status: {response.status}
           </Typography>

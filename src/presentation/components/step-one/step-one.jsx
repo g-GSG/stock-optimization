@@ -48,7 +48,7 @@ function StepOne({ setStep }) {
     <StepOneContainer>
       <StepProgress
         activeStep={0}
-        steps={["Produtos", "Estoque", "Resultado"]}
+        steps={["Produtos", "Capacidade", "Resultado"]}
       />
       <StepOneWrapper>
         <Typography fontWeight="bold" fontSize={24}>
@@ -58,7 +58,7 @@ function StepOne({ setStep }) {
           <Input
             name="product"
             label="Nome do produto"
-            fontSize='0.8vw'
+            fontSize="0.8vw"
             type="text"
             height="51px"
             width="10vw"
@@ -68,7 +68,7 @@ function StepOne({ setStep }) {
           <Input
             name="volume"
             label="Volume"
-            fontSize='0.8vw'
+            fontSize="0.8vw"
             type="number"
             height="51px"
             width="4vw"
@@ -78,7 +78,7 @@ function StepOne({ setStep }) {
           <Input
             name="amount"
             label="Quantidade"
-            fontSize='0.8vw'
+            fontSize="0.8vw"
             type="number"
             height="51px"
             width="4vw"
@@ -88,7 +88,7 @@ function StepOne({ setStep }) {
           <Input
             name="profit"
             label="Lucro"
-            fontSize='0.8vw'
+            fontSize="0.8vw"
             type="number"
             height="51px"
             width="4vw"
@@ -116,9 +116,13 @@ function StepOne({ setStep }) {
             },
           }}
         />
-        <ProductsTable rows={products} maxWidth='1vw' maxHeight='1vh' />
+        <ProductsTable rows={products} maxWidth="1vw" maxHeight="1vh" />
         <div
-          style={{ display: "flex", justifyContent: "space-between", width: "100%" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
         >
           <Button
             backgroundColor="#E0B1CB"

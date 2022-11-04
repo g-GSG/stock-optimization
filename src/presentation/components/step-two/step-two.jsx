@@ -24,37 +24,40 @@ function StepTwo({ setStep }) {
     setStockData(maxVolume);
     const data = {
       items: stepData.products,
-      maxVolume: parseInt(maxVolume)
-    }
+      maxVolume: parseInt(maxVolume),
+    };
 
     console.log(data);
-    await axios.post("http://localhost:5000/optimization", data, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      }
-    }).then(function (response) {
-      setResponse(response.data)
-      setStep(3)
-    }).catch(function (error) {
-      console.log(error)
-    });
+    await axios
+      .post("http://localhost:5000/optimization", data, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      })
+      .then(function (response) {
+        setResponse(response.data);
+        setStep(3);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
     <StepTwoContainer>
       <StepProgress
         activeStep={1}
-        steps={["Produtos", "Estoque", "Resultado"]}
+        steps={["Produtos", "Capacidade", "Resultado"]}
       />
       <StepTwoWrapper>
         <Typography fontWeight="bold" fontSize={24}>
-          Informe o volume disponível no estoque
+          Informe a capacidade disponível na loja/vitrine
         </Typography>
         <StepTwoFormWrapper>
           <Input
             name="maxVolume"
-            label="Volume do estoque"
+            label="Volume da loja/vitrine"
             type="number"
             width="57vw"
             height="90px"
